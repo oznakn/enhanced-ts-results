@@ -1,28 +1,43 @@
 {
-  "name": "ts-results",
-  "version": "3.3.0",
+  "name": "enhanced-ts-results",
+  "version": "0.1.0",
   "description": "A typescript implementation of Rust's Result and Option objects.",
-  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run clean && npm run build:ts && npm run build:copy",
-    "build:ts": "tsc -p tsconfig.json && tsc -p tsconfig.json -m esnext --outDir dist/esm/ -d false -declarationMap false",
-    "build:copy": "copyfiles README.md LICENSE src/package.json dist --flat && copyfiles src/rxjs-operators/package.json dist --up 1",
-    "clean": "rm -rf dist",
-    "test": "jest",
-    "format": "prettier . --write"
+    "build": "yarn run clean && tsc",
+    "clean": "rimraf dist"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.3.0"
+  },
   "devDependencies": {
-    "@types/jest": "^26.0.22",
-    "conditional-type-checks": "^1.0.5",
-    "copyfiles": "^2.4.1",
-    "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "rxjs": "^6.6.7",
-    "ts-jest": "^26.5.4",
-    "tslib": "^2.1.0",
-    "typescript": "^4.2"
-  }
+    "rimraf": "^3.0.2",
+    "typescript": "^4.4.2"
+  },
+  "keywords": [
+    "Rust",
+    "Result",
+    "Results",
+    "Option",
+    "Options",
+    "Typescript",
+    "TS",
+    "Ok",
+    "Err",
+    "Some",
+    "None",
+    "Typed Errors",
+    "Error Handling",
+    "Monad",
+    "Maybe",
+    "Union"
+  ],
+  "author": "Ozan Akın <ozn.akn@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oznakn/enhanced-ts-results"
+  },
+  "readme": "README.md"
 }
