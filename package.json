@@ -1,6 +1,6 @@
 {
   "name": "enhanced-ts-results",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A typescript implementation of Rust's Result and Option objects.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
